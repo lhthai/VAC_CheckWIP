@@ -35,9 +35,9 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCreatePeriod = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txtDatabase = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -55,14 +55,14 @@
             this.txtServer.Location = new System.Drawing.Point(160, 27);
             this.txtServer.Name = "txtServer";
             this.txtServer.Size = new System.Drawing.Size(244, 26);
-            this.txtServer.TabIndex = 2;
+            this.txtServer.TabIndex = 0;
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(160, 110);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(244, 26);
-            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TabIndex = 2;
             // 
             // label1
             // 
@@ -80,7 +80,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(244, 26);
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TabIndex = 3;
             // 
             // label3
             // 
@@ -102,46 +102,47 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Password:";
             // 
-            // btnCreatePeriod
+            // btnSave
             // 
-            this.btnCreatePeriod.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCreatePeriod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreatePeriod.ForeColor = System.Drawing.Color.White;
-            this.btnCreatePeriod.Location = new System.Drawing.Point(160, 202);
-            this.btnCreatePeriod.Name = "btnCreatePeriod";
-            this.btnCreatePeriod.Size = new System.Drawing.Size(106, 39);
-            this.btnCreatePeriod.TabIndex = 9;
-            this.btnCreatePeriod.Text = "Save";
-            this.btnCreatePeriod.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(160, 202);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(106, 39);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtDatabase
             // 
             this.txtDatabase.Location = new System.Drawing.Point(160, 69);
             this.txtDatabase.Name = "txtDatabase";
-            this.txtDatabase.PasswordChar = '*';
             this.txtDatabase.Size = new System.Drawing.Size(244, 26);
-            this.txtDatabase.TabIndex = 10;
+            this.txtDatabase.TabIndex = 1;
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(298, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 39);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(298, 202);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(106, 39);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // FrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 272);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtDatabase);
-            this.Controls.Add(this.btnCreatePeriod);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
@@ -152,6 +153,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmConfig";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuration";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,8 +169,8 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCreatePeriod;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtDatabase;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

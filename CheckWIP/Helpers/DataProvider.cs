@@ -12,8 +12,8 @@ namespace CheckWIP.Helpers
     public class DataProvider
     {
         private static DataProvider instance;
-        string connectionStr = "Data Source=.\\SQLEXPRESS;Initial Catalog=TCoffee;User ID=sa; Password=123456;";
-
+        // string connectionStr = "Data Source=.\\SQLEXPRESS;Initial Catalog=TCoffee;User ID=sa; Password=123456;";
+        Config config = new Config();
         public static DataProvider Instance
         {
             get => instance == null ? new DataProvider() : instance;
@@ -23,7 +23,7 @@ namespace CheckWIP.Helpers
         public DataTable ExecuteQuery(string query, object[] parameters = null)
         {
             DataTable data = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionStr))
+            using (SqlConnection connection = new SqlConnection(config.GetConnectionString()))
             {
                 connection.Open();
                 try
@@ -60,7 +60,7 @@ namespace CheckWIP.Helpers
         public int ExecuteNonQuery(string query, object[] parameters = null)
         {
             int data = 0;
-            using (SqlConnection connection = new SqlConnection(connectionStr))
+            using (SqlConnection connection = new SqlConnection(config.GetConnectionString()))
             {
                 connection.Open();
                 try
